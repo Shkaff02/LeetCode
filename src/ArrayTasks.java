@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class ArrayTasks {
     /*
     Remove duplicates
@@ -83,5 +85,21 @@ public class ArrayTasks {
         }
     }
 
+    /*
+    Contains duplicate
 
+    Given an integer array nums, return true
+    if any value appears at least twice in the array,
+    and return false if every element is distinct.
+     */
+
+    public static boolean containsDuplicate(int[] nums) {
+        HashSet<Integer> set = new HashSet<Integer>();
+        for(int i:nums) {
+            if(!set.add(i)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -11,5 +11,10 @@ public class Main {
         System.out.println("Rotate array");
         int[] rot = {1,2,3,4,5,6,7};
         ArrayTasks.rotate(rot, 3);
+        System.out.println();
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("Contains duplicate");
+        int[] dup = {1,2,3,1};
+        System.out.println("Result " + ArrayTasks.containsDuplicate(dup));
     }
 }
