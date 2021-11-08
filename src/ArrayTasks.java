@@ -52,4 +52,36 @@ public class ArrayTasks {
         }
         return profit;
     }
+
+    /*
+      Rotate array
+      Given an array, rotate the array to the right by k steps, where k is non-negative.
+     */
+
+    public static void rotate(int[] nums, int k) {
+        if(k > 0) {
+            k = k%nums.length;
+
+            move(nums, 0, nums.length - 1);
+            move(nums, 0, k - 1);
+            move(nums, k, nums.length - 1);
+        }
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
+    }
+
+    public static void move (int[] nums, int start, int end) {
+
+        while(start<=end)
+        {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+
 }
