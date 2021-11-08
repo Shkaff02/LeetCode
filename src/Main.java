@@ -5,5 +5,8 @@ public class Main {
         StringTasks.reverseString(str);
         System.out.println();
         System.out.println("----------------------------------");
+        System.out.println("Reverse integer");
+        System.out.println(StringTasks.reverse(123));
+        System.out.println("----------------------------------");
     }
 }
